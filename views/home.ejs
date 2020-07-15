@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<style>
+body{
+  background-color: white;
+}
+</style>
+
+<div class="jumbotron">
+  <h1 class="display-4">Aspire</h1>
+  <p class="lead">Aspire Impact is a social enterprise focused on leadership, skills and ecosystem development in social and environmental impact space.
+    <hr class="my-4">
+  <p class="header-about-text">
+    AspireTM is an industry-promoted, award-winning social enterprise in India, focused on Employability, Entrepreneurship & Leadership education for
+    schools, colleges and universities. Aspire’s education products include Global Content and Certifications: RoboticProTMwith CMAsia, Singapore.
+    Founded by Amit Bhatia in 2007, Aspire has trained over 63,000 students across 100 institutions in 16 Indian states since inception.
+  </p>
+  <br>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+<div class="featured-section container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="featured-test card">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">NEST</h5>
+          <p class="card-text">National Employability Skills Test or 'NEST' is Aspire’s proprietary psychometric diagnostic test to assess student readiness for careers and employment. Since 2007, we have delivered >0.5 million NEST assessments.
+            <a class="read-more" href="#">...more</a></p>
+          <p class="price-text">Rs249.99 <span> 499.99</span></p>
+          <a href="#" class="btn btn-primary">Take Test</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="featured-test card">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Career Preference Test</h5>
+          <p class="card-text">Career Preference Test (CPT) profiles individuals on eight distinct mental abilities. CPT places emphasis on identifying your strengths so that you can use this information as the basis for career choices.
+            <a class="read-more" href="#">...more</a></p>
+          <p class="price-text">Rs249.99 <span> 499.99</span></p>
+          <a href="/quiz/<%= user._id %>" class="btn btn-primary">Take Test</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="featured-test card">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Creativity Test</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            <a class="read-more" href="#">...more</a></p>
+          <p class="price-text">Rs249.99 <span> 499.99</span></p>
+          <a href="#" class="btn btn-primary">Take Test</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

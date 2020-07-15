@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+
+<body>
+
+  <%- include('partials/nav') %>
+
+  <p id="answers" hidden><%= user.answers %></p>
+
+  <form action="/quiz/<%= user._id %>" method="post">
+    <div class="header box container">
+      <h1><%= quizTitle %></h1>
+      <p><span style="color:red">*</span> Required</p>
+    </div>
+
+    <% for(var i = 0; i < questions.length; i++) { %>
+    <div class="question-box box container">
+      <p><%= questions[i] %></p>
+      <% for(var j = 0; j < options.length; j++) { %>
+      <label><input type="radio" name="<%= i %>" value="<%= (j+1) %>"> <%= options[j] %></label><br>
+      <% } %>
+    </div>
+    <% } %>
+
+    <div class="finished container">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+
+  <script type="text/javascript">
+    // Marking previous answers of user
+    var answers = document.getElementById('answers').innerHTML.split(",");
+    console.log(answers);
+    var qBox = document.getElementsByClassName('question-box');
+    for (var i = 0; i < qBox.length; i++) {
+      var current = qBox[i];
+      Inner:
+        for (var j = 0; j < current.childNodes.length; j++) {
+          if (current.childNodes[j].nodeName === "LABEL") {
+            var input = current.childNodes[j].firstChild;
+            if (input.value == answers[i]) {
+              input.checked = true;
+              console.log("checking item");
+              break Inner;
+            }
+          }
+        }
+    }
+  </script>
+
+  <%- include('partials/footer') %>

@@ -1,0 +1,97 @@
+/* Global */
+body {
+    background-color: #ddf3f5;
+}
+
+/* Home Page */
+
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron > p {
+  width: 70vw;
+  margin: auto;
+  line-height: 2;
+}
+
+.header-about-text {
+  color: #7a7a7a;
+}
+
+.featured-section {
+  padding: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card h5 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.price-text>span {
+  color: red;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.price-text {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.read-more {
+  color: blue;
+}
+
+/* Quiz */
+
+.question-box {
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.box {
+    border-radius: 10px;
+    border: 1px inset #fff;
+    background-color: #fff;
+    width: 50%;
+}
+
+.header {
+    border-top: 10px solid #a6dcef;
+    margin: 10px auto;
+    padding: 5px 10px 10px;
+
+}
+
+.finished {
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+/* Results */
+.results-jumbotron {
+  background-color: inherit;
+}
+
+/* Footer */
+.footer {
+    background-color: #eee;
+    padding: 20px 0;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.copyright > p {
+    text-align: center;
+    color: grey;
+    font-size: 0.9rem;
+}
