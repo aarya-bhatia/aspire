@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const ejs = require('ejs');
 const quiz = require(__dirname + '/quiz.js');
@@ -13,7 +14,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(session({secret: "my secret", resave: false, saveUninitialized: false}));
+app.use(session({secret: process.env.SECRET, resave: false, saveUninitialized: false}));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -151,6 +152,7 @@ app.post('/quiz', function(req, res) {
   });
 });
 
-app.listen(3000, function(req, res) {
+const port = process.env.PORT || 3000;
+app.listen(port, function(req, res) {
   console.log('Server is running on port 3000.');
 });
