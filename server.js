@@ -19,10 +19,16 @@ app.use(session({secret: process.env.SECRET, resave: false, saveUninitialized: f
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/AspireDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// mongoose.connect("mongodb://localhost:27017/AspireDB", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
+
+mongoose.connect(
+  "mongodb+srv://admin-aarya:Test-123@cluster0-tq3ny.mongodb.net/AspireDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
 
 mongoose.set("useCreateIndex", true);
 
