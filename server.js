@@ -19,11 +19,6 @@ app.use(session({secret: process.env.SECRET, resave: false, saveUninitialized: f
 app.use(passport.initialize());
 app.use(passport.session());
 
-// mongoose.connect("mongodb://localhost:27017/AspireDB", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
-
 mongoose.connect(
   "mongodb+srv://admin-aarya:Test-123@cluster0-tq3ny.mongodb.net/AspireDB", {
     useNewUrlParser: true,
@@ -67,6 +62,10 @@ app.get('/home', function(req, res) {
   }
 });
 
+app.get('/about', function(req, res){
+    res.render('about');
+});
+
 app.get('/sign-up', function(req, res) {
   res.render('sign-up');
 });
@@ -95,10 +94,9 @@ app.get('/results', function(req, res) {
 app.get('/quiz', function(req, res) {
   User.findById(req.user._id, function(err, found) {
     if (err) {
-      console.log("OOPS " + err);
+      console.log(err);
     } else {
       if (found) {
-        console.log(found);
         res.render('quiz', {
           user: found,
           quizTitle: "CPT",
@@ -152,7 +150,6 @@ app.post('/quiz', function(req, res) {
         console.log(err);
         res.sendStatus(404);
       } else {
-        console.log('updated');
         res.redirect('/results');
       }
   });

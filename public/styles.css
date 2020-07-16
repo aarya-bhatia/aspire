@@ -69,18 +69,6 @@ body {
 
 }
 
-.finished {
-    padding: 20px;
-    margin: 20px auto;
-    width: 50%;
-}
-
-.submit-quiz-btn {
-  text-align: right;
-  margin-right: 10%;
-  margin-bottom: 20px;
-}
-
 /* Results */
 .results-jumbotron {
   background-color: inherit;
@@ -88,9 +76,13 @@ body {
 
 .canvas-container {
   height: 70vh;
-  margin: 20px;
-  margin-top: 0;
+  width: 80%;
+  margin: 0 auto 20px;
   overflow: auto;
+}
+
+table th {
+    width: auto !important;
 }
 
 /* For Phones */
@@ -100,12 +92,9 @@ body {
     width: auto;
   }
 
-  .submit-quiz.btn {
-    text-align: left;
-  }
-
   .canvas-container {
     height: 45vh;
+    width: 100%;
   }
 }
 
